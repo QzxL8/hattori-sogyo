@@ -28,26 +28,37 @@
             margin: 0;
         }
         nav a {
-            margin-left: 15px;
+            margin: 0 10px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
         }
         .hero {
-            background: url('hero.jpg') no-repeat center center/cover;
+            background: url('sekou1.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            text-align: center;
             color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            position: relative;
         }
-        .hero h1 {
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text h1 {
             font-size: 3em;
-            margin: 0;
+            margin-bottom: 10px;
         }
-        .hero p {
+        .hero-text p {
             font-size: 1.5em;
         }
         section {
@@ -55,33 +66,22 @@
             max-width: 1200px;
             margin: auto;
         }
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .flex-item {
-            flex: 1 1 calc(50% - 20px);
-            background: #f9f9f9;
-            padding: 20px;
-            box-sizing: border-box;
-            border-radius: 8px;
-        }
         footer {
             text-align: center;
             padding: 20px;
-            background: #333;
-            color: #fff;
+            background: #f5f5f5;
+            font-size: 0.9em;
         }
         @media (max-width: 768px) {
-            .flex-item {
-                flex: 1 1 100%;
-            }
-            .hero h1 {
+            .hero-text h1 {
                 font-size: 2em;
             }
-            .hero p {
-                font-size: 1em;
+            .hero-text p {
+                font-size: 1.2em;
+            }
+            nav a {
+                display: inline-block;
+                margin: 5px;
             }
         }
     </style>
@@ -93,42 +93,29 @@
             <a href="index.html">ホーム</a>
             <a href="sekou_jisseki.html">施工実績</a>
             <a href="recruit.html">採用情報</a>
-            <a href="#contact">お問い合わせ</a>
+            <a href="contact.html">お問い合わせ</a>
         </nav>
     </header>
-    <div class="hero">
-        <h1>地域に根ざした確かな技術</h1>
-        <p>とび・土工工事、解体工事の専門企業</p>
-    </div>
-    <section>
-        <h2>会社概要</h2>
-        <div class="flex-container">
-            <div class="flex-item">
-                <h3>所在地</h3>
-                <p>〒949-8404 新潟県十日町市如来寺甲3240</p>
-            </div>
-            <div class="flex-item">
-                <h3>代表者</h3>
-                <p>服部 好位</p>
-            </div>
-            <div class="flex-item">
-                <h3>電話番号</h3>
-                <p>0257-63-3366</p>
-            </div>
-            <div class="flex-item">
-                <h3>建設業許可番号</h3>
-                <p>新潟県知事許可 第028508号</p>
-            </div>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>有限会社服部総業</h1>
+            <p>地域に根ざした確かな技術</p>
         </div>
     </section>
     <section>
-        <h2 id="contact">お問い合わせ</h2>
-        <p>ご質問やご相談はお気軽にお問い合わせください。</p>
-        <p>電話：0257-63-3366</p>
-        <p>メール：info@hattorisogyo.jp</p>
+        <h2>会社概要</h2>
+        <p>所在地：〒949-8404 新潟県十日町市如来寺甲3240<br>
+        電話番号：0257-63-3366<br>
+        代表者：服部 好位<br>
+        資本金：300万円<br>
+        建設業許可番号：新潟県知事許可 第028508号</p>
+    </section>
+    <section>
+        <h2>事業内容</h2>
+        <p>とび・土工工事、解体工事などを行っています。</p>
     </section>
     <footer>
-        <p>&copy; 2024 有限会社服部総業. All Rights Reserved.</p>
+        &copy; 2024 有限会社服部総業. All Rights Reserved.
     </footer>
 </body>
 </html>
