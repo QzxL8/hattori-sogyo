@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有限会社服部総業</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background: url('hero.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero-text p {
+            font-size: 1.5rem;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .flex-item {
+            flex: 1 1 300px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>有限会社服部総業</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">会社概要</a></li>
+                <li><a href="#services">事業内容</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>地域に根ざした確かな技術</h1>
+            <p>とび・土工工事、解体工事の専門企業</p>
+        </div>
+    </section>
+
+    <section id="overview">
+        <h2>会社概要</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <p><strong>所在地：</strong>〒949-8404 新潟県十日町市如来寺甲3240</p>
+                <p><strong>代表者：</strong>服部 好位</p>
+                <p><strong>電話番号：</strong>0257-63-3366</p>
+                <p><strong>資本金：</strong>300万円</p>
+                <p><strong>建設業許可番号：</strong>新潟県知事許可 第028508号</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>事業内容</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>とび・土工工事</h3>
+                <p>安全で確実な施工を提供します。</p>
+            </div>
+            <div class="flex-item">
+                <h3>解体工事</h3>
+                <p>環境に配慮した解体工事を実施します。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>お問い合わせ</h2>
+        <p>電話：0257-63-3366</p>
+        <p>メール：info@hattori-sogyo.jp</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 有限会社服部総業. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
